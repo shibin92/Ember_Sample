@@ -1,0 +1,19 @@
+<div class="row" style="background-color: #FFBC7A">
+    <center> <h3>Image Details</h3> </center>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        {{#each model as |product|}}
+            {{#link-to "about.product-details" product.id}}
+            <div class="col-xs-3">
+                {{product-comp product=product}}
+            </div>
+            {{/link-to}}
+        {{/each}}
+    </div>
+</div>
+<div class="container-fluid image-description">
+   <p class="row col-xs-12">
+        {{outlet}}
+   </p>
+</div>
